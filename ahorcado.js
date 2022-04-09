@@ -2,7 +2,7 @@ const vistaInicio = document.getElementById("inicio");
 const vistaAgregarPalabra = document.getElementById("agregar-palabra");
 const vistaJuego = document.getElementById("juego");
 
-const palabras = ["JUEGO", "ORACLE", "ONE", "ALURA", "AHORCADO", "LIBRO", "MATE", "COMIDA", "AMBIENTE", "HISTORIA", "PERSONA", "ETIQUETA", "PROGRAMA", "ESTRELLA", "ANIMAL", "JUSTICIA", "PAZ", "GUERRA", "FRIO", "CALOR", "DERECHO", "LIBERTAD", "TRABAJO", "BLOQUE", "BOLIVIA", "BRILLAR", "CADETE", "CANAL", "BARRIO", "ABEJA", "ASTROS", "CABEZA", "CABRA", "CAJA", "BANCO", "ACTO", "ABRIR", "BEBE", "BATE", "CHILE", "BRASIL", "CONO", "CORRER", "CUBA", "DEDOS", "MANOS", "PIES", "CUERPO", "PIERNAS", "PELO", "CARA", "OJOS", "NARIZ", "DIENTES", "OREJAS", "CEJAS", "LENTES"];
+const palabras = ["AGUILA", "AVESTRUZ", "BALLENA", "BISONTE", "BUFALO", "BUHO", "BUITRE", "BURRO", "CABALLO", "CABRA", "CAMALEON", "CAMELLO", "CANARIO", "CASTOR", "CEBRA", "CERDO", "CIERVO", "COBRA", "COLIBRI", "COMADREJA", "CONDOR", "CONEJO", "DELFIN", "ELEFANTE", "FAISAN", "FLAMENCO", "FOCA", "GALLINA", "GALLO", "GATO", "GORILA", "HAMSTER", "HIENA", "HIPOPOTAMO", "JABALI", "JAGUAR", "JIRAFA", "KOALA", "LAGARTO", "LEON", "LEOPARDO", "LLAMA", "LOBO", "LORO", "MANATI", "MAPACHE", "MONO", "MURCIELAGO", "NUTRIA", "ORCA", "OSO", "PALOMA", "PANDA", "PATO", "PELICANO", "PERRO", "PUMA", "RANA", "RATON", "RENO", "RINOCERONTE", "SALAMANDRA", "SAPO", "SERPIENTE", "TAPIR", "TEJON", "TIBURON", "TIGRE", "TOPO", "TORO", "TUCAN", "VACA", "ZORRILLO", "ZORRO"];
 
 const regex = new RegExp("^[A-Z\\s]+$");
 
@@ -16,7 +16,6 @@ const mostrar = (vista) =>{
 const escogerPalabra = (array) =>{
     const posicionRandom = Math.round(Math.random() * (array.length-1));
     const secreto = array[posicionRandom];
-    //Eliminamos la palabra del array asi no se vuelve a elegir.
     array.splice(posicionRandom,1);
     return secreto;
 }
@@ -198,7 +197,6 @@ btnDesistir.onclick = ()=>{
     location.reload();
 }
 
-//Capturamos array existente en sessionStorage con las palabras que no se han jugado y asi iniciar el juego desde este punto.
 let nuevoArray = JSON.parse(sessionStorage.getItem("array"));
 if (nuevoArray) {
     if (nuevoArray.length > 0) {
