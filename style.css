@@ -1,5 +1,6 @@
 :root{
   font-size: 16px;
+  
 }
 
 *{
@@ -12,8 +13,11 @@
 }
 
 body{
-  background: rgb(185,255,239);
-  background: radial-gradient(circle, rgba(185,255,239,1) 0%, rgba(72,219,205,1) 53%, rgba(0,162,172,1) 100%);
+  background-image: url("img/bg4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -26,16 +30,15 @@ body{
 
 #titulo {
   width: 100%;
-  position: relative;
-  left: -2.625rem;
+  
   margin: 2.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #titulo h1 {
-  font-size: 3rem;
-  margin: 2.5rem 0;
+  font-size: 4rem;
+  margin: 7rem 0;
   width: fit-content;
   text-align: center;
   color: #FFFFFF;
@@ -71,6 +74,7 @@ body{
   background-color: transparent;
   border: 1px solid #0A3871;
   box-sizing: border-box;
+  margin-bottom: 5rem;
   border-radius: 1.5rem;
   height: 4.1875rem;
   padding: 1.5rem;
@@ -94,7 +98,7 @@ body{
   display: flex;
   flex-direction: column;
   margin: auto;
-  min-height: 55vh;
+  min-height: 35vh;
   justify-content: space-between;
 }
 
@@ -133,9 +137,9 @@ body{
 }
 
 #ahorcado{
-  width: 60%;
+  width: 35%;
   height: 40%;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   max-width: 1200px;
   max-height: 800px;
 }
@@ -164,7 +168,7 @@ body{
   justify-content: space-between;
   font-size: 2rem;
   color: #495057;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .other p{
@@ -185,7 +189,7 @@ footer {
   margin-top: 2rem;
   position: relative;
   z-index: 4;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-bottom: 1rem;
 }
 
